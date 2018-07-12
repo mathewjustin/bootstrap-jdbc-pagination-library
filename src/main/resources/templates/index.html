@@ -1,0 +1,300 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script
+	src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#example').DataTable( {
+        "processing": true,
+        "serverSide": true,
+        "ajax": function(params)
+        {
+        	var reqParams = {
+        	        start:params.start,              
+			        pageLength:params.length,        
+			        orderBy:params.order[0].column,     
+			        orderDirection:params.order[0].dir
+        	    };
+        	 $.ajax({
+       	        type: "GET",
+       	        url: "/jdbc/paginate-student?"+$.param(reqParams),
+       	        dataType: "json",
+       	        contentType: "application/json",
+       	        success: function(result) {                        
+       	             window.location.href = window.location.origin + '/account/cps_product';             
+       	        },
+       	        error: function(error) {
+       	           
+       	     }
+         	
+         	  });//ajax close
+        }
+        	  
+    } );
+     
+} );
+</script>
+</head>
+<body>
+	<h1>Bootstrap pagination with pure JDBC</h1>
+	<br>
+	<table id="example" class="table table-striped table-bordered"
+		style="width: 100%">
+		<thead>
+			<tr>
+				<th>Student Id</th>
+				<th>Student Name</th>
+				<th>Student Dept</th>
+				<th>Student Dept Loc</th>
+ 				<th>Created By</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr>
+ 			<tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr><tr>
+				<td>abcd_1323</td>
+				<td>Raghav</td>
+				<td>MCA</td>
+				<td>Dartmore 2nd floor</td>
+				<td>Principal</td>
+ 			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
