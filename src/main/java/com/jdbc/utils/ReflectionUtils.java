@@ -23,7 +23,7 @@ public class ReflectionUtils {
 
     enum Order
     {
-        ASC("asc"), DESC("desc");
+        asc("ASC"), desc("DESC");
     	private String orderBy;
     	public String getOrderBy() {
 			return orderBy;
@@ -66,7 +66,8 @@ public class ReflectionUtils {
 			Objects.requireNonNull(params.get("orderDirection"));
 			queryString.add("ORDER BY");
 			queryString.add(getCoulumnNameFromRowPosition(orderBy,clzz));
-			
+			queryString.add(Order.valueOf(params.get("orderDirection")).orderBy);
+
 		}
 		queryString.add("LIMIT");
  		queryString.add(params.get("pageLength"));
