@@ -15,7 +15,7 @@ build:
     # https://github.com/wercker/step-maven
     - mbrevda/github-status:
       token: $GITHUB_TOKEN
-      context: My App
+      context: bootstrap-jdbc-pagination
       msg: build in process
     - wercker/maven:
       goals: install
