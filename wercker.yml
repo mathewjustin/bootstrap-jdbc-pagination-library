@@ -27,4 +27,4 @@ build:
       context: My App
       msg: build completed
       fail: an error has occurred
-      url: https://example.com/my/build/status      
+      url: https://app.wercker.com/justinmamathew/bootstrap-jdbc-pagination-library/runs  
