@@ -24,11 +24,7 @@ public class RestUtilsTests {
 	}
 	
 
-//	SELECT expressions
-//	FROM tables
-//	[WHERE conditions]
-//	[ORDER BY expression [ ASC | DESC ]]
-//	LIMIT number_rows [ OFFSET offset_value ];
+ 
 	@Test
 	public void testPaginationQueryWithSort()
 	{
