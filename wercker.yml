@@ -27,4 +27,5 @@ build:
       context: jdbc bootstrp pagination
       msg: build completed
       fail: an error has occurred
+      url: https://api.github.com/repos/mathewjustin/bootstrap-jdbc-pagination-library/statuses/
       
