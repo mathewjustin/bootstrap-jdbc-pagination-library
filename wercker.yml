@@ -13,7 +13,7 @@ build:
     # https://devcenter.wercker.com/development/steps/
   steps:
     # https://github.com/wercker/step-maven
-    - mbrevda/github-status:
+    - mathewjustin/github-status:
       token: $GITHUB_TOKEN
       context: bootstrap-jdbc-pagination
       msg: build in process
@@ -22,7 +22,7 @@ build:
       cache_repo: true
       version: 3.5.2
   after-steps:
-    - mbrevda/github-status:
+    - mathewjustin/github-status:
       token: $GITHUB_TOKEN
       context: bootstrap-jdbc-pagination
       msg: build completed
