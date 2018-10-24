@@ -35,7 +35,7 @@ public class RestUtilsTests {
 		assertEquals("SELECT student_id,student_name,student_dept,student_dept_loc,created_on,created_by FROM "
 				+ "Student_tbl "
 				+ "ORDER BY created_by ASC "
-				+ "LIMIT 10 OFFSET 1", ReflectionUtils.getPaginationQuery(getDummyReqParamsWithOrderAndDirection(), Student.class)); 
+				+ "LIMIT 10 OFFSET 0", ReflectionUtils.getPaginationQuery(getDummyReqParamsWithOrderAndDirection(), Student.class)); 
 	}
 	
 
