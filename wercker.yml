@@ -28,3 +28,7 @@ build:
       msg: build completed
       fail: an error has occurred
       url: https://app.wercker.com/justinmamathew/bootstrap-jdbc-pagination-library/runs  
+    - slack-notifier:
+      url: $SLACK_URL
+      channel: build-notifications
+      username: slack-build-bot
