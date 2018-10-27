@@ -41,4 +41,3 @@ deploy:
       msg: deployment in process     
     - wercker/maven:
       goals: clean deploy
-      settings: settings.xml
