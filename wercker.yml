@@ -18,7 +18,7 @@ build:
       context: bootstrap-jdbc-pagination
       msg: build in process
     - wercker/maven:
-      goals: install
+      goals: clean compile
       cache_repo: true
       version: 3.5.2
   after-steps:
@@ -32,3 +32,12 @@ build:
       url: $SLACK_URL
       channel: build-notifications
       username: slack-build-bot
+deploy:
+  steps:
+    - mbrevda/github-status:
+      token: $GITHUB_TOKEN
+      context: bootstrap-jdbc-pagination
+      msg: deployment in process     
+    - wercker/maven:
+      goals: clean install
+      settings: settings.xml
