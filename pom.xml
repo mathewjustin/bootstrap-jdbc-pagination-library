@@ -14,7 +14,7 @@
 	<distributionManagement>
 		<repository>
 			<id>bintray-mathewjustin-bootstrap-jdbc-pagination-library</id>
-			<url>https://api.bintray.com/maven/mathewjustin/bootstrap-jdbc-pagination-library/;publish=1</url>
+			<url>https://api.bintray.com/mathewjustin/bootstrap-jdbc-pagination-library/;publish=1</url>
 		</repository>
 	</distributionManagement>
 	
