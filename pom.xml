@@ -11,6 +11,13 @@
 	<name>jdbc-bootstrap-pagination-1</name>
 	<description>Demo project for Spring Boot</description>
 
+	<distributionManagement>
+		<repository>
+			<id>bintray-mathewjustin-bootstrap-jdbc-pagination-library</id>
+			<url>https://dl.bintray.com/mathewjustin/bootstrap-jdbc-pagination-library</url>
+		</repository>
+	</distributionManagement>
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
