@@ -40,5 +40,5 @@ deploy:
       context: bootstrap-jdbc-pagination
       msg: deployment in process     
     - wercker/maven:
-      goals: clean install
+      goals: clean deploy
       settings: settings.xml
