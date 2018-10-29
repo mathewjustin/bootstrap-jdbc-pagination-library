@@ -33,7 +33,7 @@ build:
       channel: build-notifications
       username: slack-build-bot
 deploy:
-  box: maven:3.5.2-jdk-8
+  box: zenika/alpine-maven
   steps:
     - mbrevda/github-status:
       token: $GITHUB_TOKEN
