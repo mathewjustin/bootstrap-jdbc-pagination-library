@@ -39,5 +39,5 @@ deploy:
       token: $GITHUB_TOKEN
       context: bootstrap-jdbc-pagination
       msg: deployment in process     
-    - justinmamathew/custom-maven-push:
+    - justinmamathew/maven:
       goals: clean deploy
