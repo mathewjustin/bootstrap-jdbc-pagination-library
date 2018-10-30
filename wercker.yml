@@ -33,11 +33,11 @@ build:
       channel: build-notifications
       username: slack-build-bot
 deploy:
-  box: zenika/alpine-maven
+  box: maven:3.5.2-jdk-8
   steps:
     - mbrevda/github-status:
       token: $GITHUB_TOKEN
       context: bootstrap-jdbc-pagination
       msg: deployment in process     
-    - wercker/maven:
+    - Justin-Mathew/step-maven:
       goals: clean deploy
